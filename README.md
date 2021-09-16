@@ -1,6 +1,6 @@
 # Ubuntu with NoVNC/[PureVNC](https://github.com/vital987/vubuntu/tree/purevnc) (Direct VNC)
 
-[![Ubuntu Version](https://img.shields.io/static/v1?label=Ubuntu&message=20.04&color=E95420&logo=ubuntu)](https://ubuntu.com) [![Maintainer](https://img.shields.io/static/v1?label=Maintainer&message=Vital987&color=1e90ff)](https://github.com/vital987) [![Maintainance](https://img.shields.io/badge/Maintenance%20Level-Active-success.svg)](https://github.com/vital987) [![Docker Pulls](https://img.shields.io/docker/pulls/vital987/vubuntu.svg)](https://hub.docker.com/r/vital987/vubuntu) [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)]()<br>[![Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/vital987/vubuntu)<br>
+[![Ubuntu Version](https://img.shields.io/static/v1?label=Ubuntu&message=20.04&color=E95420&logo=ubuntu)](https://ubuntu.com) [![Maintainer](https://img.shields.io/static/v1?label=Maintainer&message=Vital987&color=1e90ff)](https://github.com/vital987) [![Maintainance](https://img.shields.io/badge/Maintenance%20Level-Active-success.svg)](https://github.com/vital987) [![Docker Pulls](https://img.shields.io/docker/pulls/vital987/vubuntu.svg)](https://hub.docker.com/r/vital987/vubuntu) [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)]()<br>
 
 ## **Table of Contents :**
   * [**Packages**](#packages-)
@@ -52,22 +52,17 @@
 | NGROK_AUTH_TOKEN | Ngrok Token |
 
 ## **Installation :**
- * Heroku Users :
-   * Click on [Deploy Now](https://heroku.com/deploy?template=https://github.com/vubuntu) button.
-   * Set the app name & variables.
-   * Deploy.
- * Manual Method :
-   * Edit & Run Command :
-     ```
-     docker run --name vubuntu \
-     -e VNC_PASS="samplepass" \
-     -e VNC_TITLE="Vubuntu" \
-     -e VNC_RESOLUTION="1280x720" \
-     -e DISPLAY=:0 \
-     -e PORT=9870 \
-     -d -p 8080:9870 \
-     vital987/vubuntu:latest
-     ```  
+ * Edit & Run Command :
+   ```
+   docker run --name vubuntu \
+   -e VNC_PASS="samplepass" \
+   -e VNC_TITLE="Vubuntu" \
+   -e VNC_RESOLUTION="1280x720" \
+   -e DISPLAY=:0 \
+   -e PORT=9870 \
+   -d -p 8080:9870 \
+   vital987/vubuntu:latest
+   ```  
 ## **Warnings :**
   * [ ! ] **VNC_TITLE & VNC_PASS values should be without spaces.**
   * [ ! ] **The whole project runs as a root user in a docker container.**
